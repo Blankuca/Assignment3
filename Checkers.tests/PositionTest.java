@@ -19,9 +19,23 @@ public class PositionTest {
 		position.setPosition(1,2);
 	}
 	
+	//Two tests for isValid()
 	@Test
 	public void testAreValid() throws MyException {
 		assertTrue(position.areValid(1,2));
+	}
+	
+	@Test (expected = MyException.class)
+	public void test2AreValid() throws MyException {
+		position.areValid(8,10);
+	}
+	
+	@Test
+	public void testSetPosition() {
+		setup();
+		position.setPosition(3,4);
+		assertEquals(3, position.getCol());
+		assertEquals(4, position.getRow());
 	}
 
 	@Test

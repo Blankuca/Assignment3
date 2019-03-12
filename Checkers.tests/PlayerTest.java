@@ -14,7 +14,8 @@ public class PlayerTest {
 	public void setup() {
 	 player = new Player();
 	}
-
+	
+	//Both getId() and setID() are tested here.
 	@Test
 	public void testGetID() {
 		setup();
